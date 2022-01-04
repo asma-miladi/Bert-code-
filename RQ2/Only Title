@@ -417,9 +417,8 @@ features11
 
 """#**Classification**"""
 
-features=np.concatenate([features3,features4,features5,features6,features7,features8,features9,features10,features11,features12,features13,features14,features15,features16,features17,features18,features19,features20,features21,features22,features23,features24,features25,features26,features27,features29, features30, features31])
 
-#features=np.concatenate([features3,features4,features5,features6,features7,features8,features9,features10,features11])
+features=np.concatenate([features3,features4,features5,features6,features7,features8,features9,features10,features11])
 
 features.shape
 
