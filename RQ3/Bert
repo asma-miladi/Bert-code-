@@ -32,17 +32,13 @@ warnings.filterwarnings('ignore')
 from google.colab import drive 
 drive.mount('/content/gdrive')
 
-#Mozilla
-df1=pd.read_csv('gdrive/My Drive/cln_copie_dup_total1.csv',delimiter=';')
-df2=pd.read_csv('gdrive/My Drive/cln_copie_nndup_total1.csv',delimiter=';')
+
 
 #Thunderbird
 df1=pd.read_csv('gdrive/My Drive/test_dup_TB.csv',delimiter=';')
 df2=pd.read_csv('gdrive/My Drive/test_Nondup_TB.csv',delimiter=';')
 
-#Eclipse
-df1=pd.read_csv('gdrive/My Drive/EP_test_dup.csv',delimiter=';')
-df2=pd.read_csv('gdrive/My Drive/EP_test_nondup.csv',delimiter=';')
+
 
 df1['Label'] = 'duplicate'
 df2['Label'] = 'non duplicate'
