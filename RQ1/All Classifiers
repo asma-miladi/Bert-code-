@@ -33,17 +33,12 @@ warnings.filterwarnings('ignore')
 from google.colab import drive 
 drive.mount('/content/gdrive')
 
-#Mozilla
-df1=pd.read_csv('gdrive/My Drive/cln_copie_dup_total1.csv',delimiter=';')
-df2=pd.read_csv('gdrive/My Drive/cln_copie_nndup_total1.csv',delimiter=';')
+
 
 #Thunderbird
 df1=pd.read_csv('gdrive/My Drive/test_dup_TB.csv',delimiter=';')
 df2=pd.read_csv('gdrive/My Drive/test_Nondup_TB.csv',delimiter=';')
 
-#Eclipse
-df1=pd.read_csv('gdrive/My Drive/EP_test_dup.csv',delimiter=';')
-df2=pd.read_csv('gdrive/My Drive/EP_test_nondup.csv',delimiter=';')
 
 df1['Label'] = 'duplicate'
 df2['Label'] = 'non duplicate'
@@ -426,9 +421,9 @@ features11
 
 """#**Classification**"""
 
-features=np.concatenate([features3,features4,features5,features6,features7,features8,features9,features10,features11,features12,features13,features14,features15,features16,features17,features18,features19,features20,features21,features22,features23,features24,features25,features26,features27,features29, features30, features31])
+features=np.concatenate([features3,features4,features5,features6,features7,features8,features9,features10,features11])
 
-#features=np.concatenate([features3,features4,features5,features6,features7,features8,features9,features10,features11])
+
 
 features.shape
 
