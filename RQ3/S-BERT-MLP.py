@@ -14,9 +14,8 @@ cleaned_description2 = df['description2'].apply(lambda x: ' '.join(simple_prepro
 BR1= cleaned_title1 + cleaned_description1
 BR2= cleaned_title2 + cleaned_description2
 
-word_embedding_model = models.Transformer('bert-base-uncased') #max_seq_length=384
+word_embedding_model = models.Transformer('bert-base-uncased',max_seq_length=150)
 pooling_model = models.Pooling(word_embedding_model.get_word_embedding_dimension(), pooling_mode_mean_tokens=True)
-#dense_model = models.Dense(in_features=pooling_model.get_sentence_embedding_dimension(), out_features=384, activation_function=nn.Tanh())
 
 model = SentenceTransformer(modules=[word_embedding_model, pooling_model])
 
